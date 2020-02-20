@@ -1,14 +1,8 @@
-M.AutoInit();
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyC_N5-3wlIJ0Rvs2scqS4x2T5OaAuCgX1U",
-    authDomain: "react-app-d226a.firebaseapp.com",
-    databaseURL: "https://react-app-d226a.firebaseio.com",
-    projectId: "react-app-d226a",
-    storageBucket: "react-app-d226a.appspot.com",
-    messagingSenderId: "618150277107",
-    appId: "1:618150277107:web:2ec7e22e3f15a926316c86"
+   /*
+   ** Firebase config data
+   */
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
