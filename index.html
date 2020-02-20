@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Login</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/materialize.min.css">
+</head>
+
+<body class="grey lighten-4">
+    <ul class="tabs">
+        <li class="tab" data-path="register">
+            <a href="#register">Create account</a>
+        </li>
+        <li class="tab" data-path="login">
+            <a href="#login">Log in</a>
+        </li>
+        <li class="tab" data-path="dropdown">
+            <a href="#dropdown">Dropdowns</a>
+        </li>
+    </ul>
+    <div id="register">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Register</h1>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <form id="registerForm">
+                                <div class="input-field">
+                                    <input type="text" id="registerEmail">
+                                    <label for="registerEmail">Email</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" id="registerPassword">
+                                    <label for="registerPassword">Password</label>
+                                </div>
+                                <div class="input-field center">
+                                    <button id="registerBtn" class="btn waves-effect full-width">register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p>
+                        <button id="google" class="btn red waves-effect">Sign In with Google</button>
+                    </p>
+                    <p>
+                        <button id="facebook" class="btn blue darken-4 waves-effect">Sign In with Facebook</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Login</h1>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <form id="loginForm">
+                                <div class="input-field">
+                                    <input type="text" id="loginEmail">
+                                    <label for="loginEmail">Email</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" id="loginPassword">
+                                    <label for="loginPassword">Password</label>
+                                </div>
+                                <div class="input-field center">
+                                    <button id="loginBtn" class="btn waves-effect full-width">login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dropdown">
+        <div class="container">
+            <h2>Dropdown</h2>
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li><a href="#!">three</a></li>
+                <li><a href="#!">four</a></li>
+                <li><a href="#!">five</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <p id="content"></p>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="materialize/materialize.js"></script>
+    <script src="main.js"></script>
+    <script>
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems, {
+            coverTrigger: false,
+            hover: true
+        });
+    </script>
+</body>
+
+</html>
