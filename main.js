@@ -68,14 +68,19 @@ watch();
 
 function showContent(user) {
     document.body.innerHTML = `
-        <div class="container center"> ${user.displayName ? `
-            <p class="flow-text">Welcome, ${user.displayName}!
-            <img width="150" class="circle" src="${user.photoURL}">
-            <p>Email: ${user.email}</p>
-            </p>
-            ` : `<p class="flow-text">Welcome: ${user.email}!</p>`
+        <div class="container center"> 
+        <div class="row">
+        <div class="col s12 m6 offset-m3">
+                    ${user.displayName ? `
+                    <p class="flow-text">Welcome, ${user.displayName}!</p>
+                    <img width="150" class="circle" src="${user.photoURL}">
+                    <p>Email: ${user.email}</p>
+                    ` :
+            `<p class="flow-text">Welcome: ${user.email}!</p>`
         }
-            <button class="btn" onclick="signOut()">Sign out</button>
+                    <button class="btn" onclick="signOut()">Sign out</button>
+                </div>
+            </div>
         </div>
     `
 }
