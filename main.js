@@ -1,8 +1,14 @@
+M.AutoInit()
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-   /*
-   ** Firebase config data
-   */
+    apiKey: "AIzaSyC_N5-3wlIJ0Rvs2scqS4x2T5OaAuCgX1U",
+    authDomain: "react-app-d226a.firebaseapp.com",
+    databaseURL: "https://react-app-d226a.firebaseio.com",
+    projectId: "react-app-d226a",
+    storageBucket: "react-app-d226a.appspot.com",
+    messagingSenderId: "618150277107",
+    appId: "1:618150277107:web:2ec7e22e3f15a926316c86"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -92,9 +98,11 @@ google.onclick = () => {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
+        console.log(user, token)
         // ...
         console.log(token, user)
     }).catch(function (error) {
+        M.toast({ html: 'Ocurrió un error ' + error })
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -113,9 +121,11 @@ facebook.onclick = () => {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
+        console.log(user, token)
         // ...
         console.log(token, user)
     }).catch(function (error) {
+        M.toast({ html: 'Ocurrió un error ' + error })
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;

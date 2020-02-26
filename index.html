@@ -17,7 +17,26 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="materialize/materialize.min.css">
+
+    <style>
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #login,
+        #register {
+            animation: fade 700ms ease;
+        }
+    </style>
+
 </head>
+
 
 <body class="grey lighten-4">
     <ul class="tabs">
@@ -46,17 +65,17 @@
                                     <input type="password" id="registerPassword">
                                     <label for="registerPassword">Password</label>
                                 </div>
-                                <div class="input-field center">
-                                    <button id="registerBtn" class="btn waves-effect full-width">register</button>
-                                </div>
+                                <button id="registerBtn" class="btn waves-effect full-width">register</button>
                             </form>
                         </div>
                     </div>
-                    <div class="col m6 s12 center">
-                        <button id="google" class="btn red waves-effect">Google Sign in</button>
-                    </div>
-                    <div class="col m6 s12 center">
-                        <button id="facebook" class="btn blue darken-4 waves-effect">Facebook Sign in</button>
+                    <div class="row">
+                        <div class="col s6 center">
+                            <button id="google" class="btn red waves-effect">Google Sign in</button>
+                        </div>
+                        <div class="col s6 center">
+                            <button id="facebook" class="btn blue darken-4 waves-effect">Facebook Sign in</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,9 +99,7 @@
                                     <input type="password" id="loginPassword">
                                     <label for="loginPassword">Password</label>
                                 </div>
-                                <div class="input-field center">
-                                    <button id="loginBtn" class="btn waves-effect full-width">login</button>
-                                </div>
+                                <button id="loginBtn" class="btn waves-effect full-width">login</button>
                             </form>
                         </div>
                     </div>
@@ -93,13 +110,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="materialize/materialize.js"></script>
     <script src="main.js"></script>
-    <script>
-        var elems = document.querySelectorAll('.dropdown-trigger');
-        var instances = M.Dropdown.init(elems, {
-            coverTrigger: false,
-            hover: true
-        });
-    </script>
 </body>
 
 </html>
